@@ -1,13 +1,17 @@
 function switchTheme(toggle) {
   const html = document.querySelector('html');
   const toggleText = document.querySelector('.toggle_text');
+  const toggleIcon = document.querySelector('.toggle_icon');
+  // <i class="fa-duotone fa-moon"></i>
 
   if (toggle.checked) {
     html.dataset.colorMode = 'dark';
     toggleText.innerText = `Dark Mode`;
+    toggleIcon.innerHTML = `<i class="fa-solid fa-moon" style="color: #ffffff;"></i>`;
   } else {
     html.dataset.colorMode = 'light';
     toggleText.innerText = `Light Mode`;
+    toggleIcon.innerHTML = `<i class="fa-regular fa-moon"></i>`;
   }
 }
 
@@ -16,14 +20,16 @@ document.addEventListener('click', function (e) {
   const dropdownMenu = document.querySelector('.dropdown_menu');
 
   if (e.target !== dropdown) {
-    dropdownMenu.classList.remove('active');
+    if (dropdownMenu.classList.contains('active')) {
+      dropdownMenu.classList.remove('active');
+    }
   } else {
     dropdownMenu.classList.toggle('active');
   }
 });
 
-function getData(url) {
-  return fetch(url)
+async function getData(url) {
+  return await fetch(url)
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -33,7 +39,7 @@ function getData(url) {
     });
 }
 
-async function renderContent(url) {
+function renderContent(url) {
   getData(url).then((data) => {
     const main = document.querySelector('main');
     main.innerHTML = '';
@@ -83,6 +89,8 @@ function renderByRegion(el) {
 function backButton() {
   const boxWrapper = document.querySelector('.countries_box_wrapper');
   const countriesDetails = document.querySelector('.countries_details');
+  const field = document.querySelector('.field');
+  field.style.display = 'flex';
   countriesDetails.remove();
   boxWrapper.style.display = 'grid';
 }
@@ -90,7 +98,9 @@ function backButton() {
 function renderDetail(el) {
   const main = document.querySelector('main');
   const boxWrapper = document.querySelector('.countries_box_wrapper');
+  const field = document.querySelector('.field');
   boxWrapper.style.display = 'none';
+  field.style.display = 'none';
 
   getData('https://restcountries.com/v2/name/' + el.id).then((data) => {
     const country = data[0];

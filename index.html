@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-color-mode="theme1">
+<html lang="en" data-color-mode="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,73 +12,54 @@
     ></script>
   </head>
   <body>
-    <!-- NAVBAR -->
     <nav>
-      <div class="container navbar">
+      <div class="container">
         <h1 class="title">Where in the world?</h1>
-        <div class="toggle">
+        <div class="toggle_wrapper">
           <input
             type="checkbox"
-            class="toggle__checkBox"
-            onclick="toggleMode(this)"
+            name="toggle"
+            id="toggle"
+            onClick="switchTheme(this)"
           />
-          <div><i class="fa-regular fa-moon toggle__icon"></i></div>
-          <div class="toggle__text">Dark Mode</div>
+          <div class="toggle_icon">
+            <i class="fa-regular fa-moon"></i>
+          </div>
+          <span class="toggle_text"> Dark Mode </span>
         </div>
       </div>
     </nav>
-    <!-- NAVBAR -->
-
-    <!-- SEARCH & FILTER FIELD -->
     <div class="container">
-      <section class="search__filter__field">
-        <div class="search__box">
-          <div class="search__icon" onclick="searchCountry()">
+      <div class="field">
+        <div class="search_box">
+          <div class="search_icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <input
             type="text"
-            id="search__input"
+            id="search_input"
             placeholder="Search for a country..."
           />
         </div>
-        <div class="filter__box">
-          <div class="filter__placeholder" onclick="showFilterOption()">
-            <p class="filter__text">Filter by Region</p>
-            <div class="filter__icon"><i class="fa-thin fa-less-than"></i></div>
+        <div class="filter_dropdown">
+          <div id="dropdown_checkbox"></div>
+          <div class="dropdown_label">Filter by Region</div>
+          <div class="dropdown_menu">
+            <div id="africa" onclick="renderByRegion(this)">Africa</div>
+            <div id="america" onclick="renderByRegion(this)">America</div>
+            <div id="asia" onclick="renderByRegion(this)">Asia</div>
+            <div id="europe" onclick="renderByRegion(this)">Europe</div>
+            <div id="oceania" onclick="renderByRegion(this)">Oceania</div>
           </div>
-          <ul class="filter__option__box">
-            <li class="filter__option" id="AU" onclick="showByRegion(this)">
-              Africa
-            </li>
-            <li
-              class="filter__option"
-              id="NAFTA  "
-              onclick="showByRegion(this)"
-            >
-              America
-            </li>
-            <li class="filter__option" id="ASEAN" onclick="showByRegion(this)">
-              Asia
-            </li>
-            <li class="filter__option" id="EU" onclick="showByRegion(this)">
-              Europe
-            </li>
-            <li class="filter__option" id="CEFTA" onclick="showByRegion(this)">
-              Oceania
-            </li>
-          </ul>
+          <div class="dropdown_icon">
+            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+          </div>
         </div>
-      </section>
-    </div>
-    <!-- SEARCH & FILTER FIELD -->
-
-    <!-- COUNTRIES-->
-    <div class="container">
-      <div class="container__countries">
-        <div class="grid__container"></div>
       </div>
     </div>
+    <div class="container">
+      <main></main>
+    </div>
   </body>
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </html>
