@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/16c6ca784e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="title">Where in the world?</h1>
+        <div class="toggle_wrapper">
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            onClick="switchTheme(this)"
+          />
+          <div class="toggle_icon">
+            <i class="fa-regular fa-moon"></i>
+          </div>
+          <span class="toggle_text"> Dark Mode </span>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="field">
+        <div class="search_box">
+          <div class="search_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input
+            type="text"
+            id="search_input"
+            placeholder="Search for a country..."
+          />
+        </div>
+        <div class="filter_dropdown">
+          <div id="dropdown_checkbox"></div>
+          <div class="dropdown_label">Filter by Region</div>
+          <div class="dropdown_menu">
+            <div id="africa" onclick="renderByRegion(this)">Africa</div>
+            <div id="america" onclick="renderByRegion(this)">America</div>
+            <div id="asia" onclick="renderByRegion(this)">Asia</div>
+            <div id="europe" onclick="renderByRegion(this)">Europe</div>
+            <div id="oceania" onclick="renderByRegion(this)">Oceania</div>
+          </div>
+          <div class="dropdown_icon">
+            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <main></main>
+    </div>
+  </body>
+  <script src="scripts/script.js"></script>
+</html>
