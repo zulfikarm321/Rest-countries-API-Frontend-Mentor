@@ -1,14 +1,14 @@
 # Frontend Mentor - Multi-step form solution
 
-![Screenshot](/screenshot/ss1.png)
-![Screenshot](/screenshot/mobile.png)
+![Review](/review/review%20mobile.gif)
+![Screenshot](/review/review%20desktop.gif)
 
 This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://zulfikarm321.github.io/Multi-step-form-Frontend-mentor-/)
+- Live Site URL: [Github Page](https://zulfikarm321.github.io/Rest-countries-API-Frontend-Mentor/)
 
 ### The challenge
 
@@ -19,8 +19,7 @@ Users should be able to:
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
-
+- Toggle the color scheme between light and dark mode _(optional)_
 
 ### Built with
 
@@ -34,5 +33,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Instagram - [@yourusername](https://www.instagram.com/zulfikar_muhamad_/)
+- Frontend Mentor - [@zulfikarm321](https://www.frontendmentor.io/profile/yourusername)
+- Instagram - [@zulfikar*muhamad*](https://www.instagram.com/zulfikar_muhamad_/)
