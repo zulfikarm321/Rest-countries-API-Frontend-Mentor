@@ -173,4 +173,10 @@ function renderDetail(el) {
   });
 }
 
+function searchCountry() {
+  const searchInput = document.querySelector('#search_input');
+
+  renderContent('https://restcountries.com/v3.1/name/' + searchInput.value);
+}
+
 renderContent('./data.json');
